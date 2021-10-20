@@ -21,6 +21,16 @@ Run ```npm start```
 - react-paginate: to render a pagination
 
 
+## Api Calls
+
+1. GET- get all the gategories 
+   ``` /categories ```
+2. POST- add new blog  
+   ```/posts```
+3. GET- get blogs according to the page number
+   ``` /posts?page={pageNr}```
+
+
 
 
 ## Structure
