@@ -23,12 +23,9 @@ Run ```npm start```
 
 ## Api Calls
 
-1. GET- get all the gategories 
-   ``` /categories ```
-2. POST- add new blog  
-   ```/posts```
-3. GET- get blogs according to the page number
-   ``` /posts?page={pageNr}```
+1. GET- get all the gategories  ``` /categories ```
+2. POST- add new blog   ```/posts```
+3. GET- get blogs according to the page number  ``` /posts?page={pageNr}```
 
 
 
