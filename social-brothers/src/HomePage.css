@@ -237,6 +237,10 @@ select {
     text-align: center;
     margin: 30px 0px;
   }
+  
+  .form h1 {
+    font-size: 19px;
+  }
 
   input,
   select,
