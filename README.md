@@ -1,6 +1,6 @@
-# social-brothers
+# Social-brothers
 
-
+# Structure:
 ```
 ├── README.md
 ├── package-lock.json
