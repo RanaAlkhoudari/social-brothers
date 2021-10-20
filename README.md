@@ -1,5 +1,6 @@
 # Social-brothers
 
+
 ## Getting Started
 
 To get started you can simply clone the repo and install the dependencies in the root folder:
@@ -8,17 +9,22 @@ Install ```npm install```
 
 Run ```npm start```
 
+
 ## Libraries/Frameworks
 
 react: UI library
+
 react-router-dom: The router components of react
+
 axios: to make HTTP requests
-react-paginate: to render a pagination.
+
+react-paginate: to render a pagination
 
 
 
 
-## Structure:
+## Structure
+
 ```
 ├── README.md
 ├── package-lock.json
