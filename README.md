@@ -1,5 +1,13 @@
 # Social-brothers
 
+The project contains 3 pages (routes):
+
+- A Homepage to display all the blogs and for users to create a new blog.
+- 
+- A Blogpage to display all the blogs and load more pages using the pagination.
+- 
+- Notfound page
+
 
 ## Getting Started
 
@@ -70,7 +78,7 @@ Run ```npm start```
     ├── reportWebVitals.js
     └── setupTests.js
 ```
-
+ 
 
 
 
