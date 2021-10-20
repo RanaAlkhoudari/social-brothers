@@ -2,7 +2,11 @@
 
 # Getting Started
 
-To get started you can simply clone the repo and install the dependencies in the root folder
+To get started you can simply clone the repo and install the dependencies in the root folder:
+
+Install ```npm install```
+
+Run ```npm start```
 
 
 
