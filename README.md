@@ -1,6 +1,12 @@
 # Social-brothers
 
-## Getting Started
+# Getting Started
+
+To get started you can simply clone the repo and install the dependencies in the root folder
+
+Steps	with NPM
+Install	npm install
+Run	npm run dev
 
 
 # Structure:
