@@ -82,6 +82,8 @@ Run ```npm start```
 
 
 
+Note: The Api gives the data as just 10 blogs according to the page number, so after creating a new blog, the user can't see it in the right corner. 
+It is possible to refetch it but the number of all the pages is anonymous, the user can see it by clicking many times on the Meer Laden button.
 
 
 
