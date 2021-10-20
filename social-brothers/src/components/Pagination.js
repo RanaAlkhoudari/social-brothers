@@ -29,7 +29,12 @@ function Pagination({ setBlogs }) {
       previousLabel={"← Vorig"}
       nextLabel={"Volgende pagina →"}
       onPageChange={handlePageClick}
-      pageCount={119}
+      pageCount={124}
+      containerClassName={"pagination"}
+      previousLinkClassName={"pagination__link"}
+      nextLinkClassName={"pagination__link"}
+      activeClassName={"pagination__link--active"}
+      disabledClassName={"pagination__link--disabled"}
     />
   );
 }

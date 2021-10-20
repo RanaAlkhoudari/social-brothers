@@ -7,7 +7,9 @@ function AddProduct() {
     title: "",
     category_id: "",
     content: "",
+    img_url: "",
   });
+
   const token = "pj11daaQRz7zUIH56B9Z";
   useEffect(() => {
     async function fetchData() {
@@ -22,13 +24,13 @@ function AddProduct() {
         );
         setCategories(response.data);
       } catch (error) {
-        console.log(error);
+        console.log(error.response);
       }
     }
     fetchData();
   }, []);
 
-  function onSubmit(e) {
+  function handleSubmit(e) {
     e.preventDefault();
     async function postData() {
       try {
@@ -47,6 +49,7 @@ function AddProduct() {
         );
         if (response.status === 201) {
           alert("Post succesvol aangemaakt.");
+          e.target.reset();
         }
       } catch (error) {
         console.log(error.response);
@@ -62,46 +65,62 @@ function AddProduct() {
   }
 
   return (
-    <form className="form" onSubmit={onSubmit}>
-      <label>Berichtnaam </label>
-      <input
-        required
-        type="text"
-        placeholder="Geen title"
-        onChange={(e) => handleChange(e)}
-        id="title"
-      />
+    <>
+      <form className="form" onSubmit={handleSubmit}>
+        <h1>Plaats een blog bericht</h1>
+        <label>Berichtnaam </label>
+        <input
+          required
+          type="text"
+          placeholder="Geen title"
+          onChange={(e) => handleChange(e)}
+          id="title"
+        />
 
-      <label>Categorie </label>
-      <select
-        required
-        id="category_id"
-        onChange={(e) => handleChange(e)}
-        value={data.category_id}
-      >
-        <option className="first-option" value="" defaultValue hidden>
-          Geen categorie
-        </option>
-        {categories.map((category) => {
-          return (
-            <option key={category.id} value={category.id}>
-              {category.name}
-            </option>
-          );
-        })}
-      </select>
+        <label>Categorie </label>
+        <select
+          required
+          id="category_id"
+          onChange={(e) => handleChange(e)}
+          value={data.category_id}
+        >
+          <option className="first-option" value="" defaultValue hidden>
+            Geen categorie
+          </option>
+          {categories.map((category) => {
+            return (
+              <option key={category.id} value={category.id}>
+                {category.name}
+              </option>
+            );
+          })}
+        </select>
 
-      <label>Bericht </label>
-      <textarea
-        required
-        onChange={(e) => handleChange(e)}
-        id="content"
-      ></textarea>
+        <label>Header afbeelding</label>
+        <input
+          className="upload-image-input"
+          required
+          onChange={(e) => handleChange(e)}
+          type="file"
+          id="img_url"
+          name="img"
+          title=""
+          accept="image/*"
+          style={{ color: "transparent" }}
+        />
 
-      <div className="left-button">
-        <button type="submit">Bericht aanmaken</button>
-      </div>
-    </form>
+        <label>Bericht </label>
+        <textarea
+          required
+          onChange={(e) => handleChange(e)}
+          id="content"
+        ></textarea>
+
+        <div className="left-button">
+          <button type="submit">Bericht aanmaken</button>
+        </div>
+      </form>
+    </>
   );
 }
 

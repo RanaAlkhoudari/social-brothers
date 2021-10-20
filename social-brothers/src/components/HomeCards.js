@@ -20,7 +20,7 @@ function HomeCards() {
         setIsLoading(false);
         setBlogs(response.data);
       } catch (error) {
-        console.log(error);
+        console.log(error.response);
         setIsLoading(false);
       }
     }
@@ -31,7 +31,6 @@ function HomeCards() {
     setPage(page + 1);
     async function fetchData() {
       setIsLoading(true);
-
       try {
         const response = await axios.get(
           `http://178.62.198.162/api/posts?page=${page}`,
@@ -42,10 +41,9 @@ function HomeCards() {
           }
         );
         setIsLoading(false);
-
         setBlogs(response.data);
       } catch (error) {
-        console.log(error);
+        console.log(error.response);
         setIsLoading(false);
       }
     }
@@ -56,9 +54,6 @@ function HomeCards() {
     <>
       <div className="card-wrapper">
         {blogs.length === 0 && !isLoading && <p>Geen blogs meer</p>}
-
-        {isLoading && <p>Loading ...</p>}
-
         {blogs.length !== 0 &&
           blogs.map((blog, index) => {
             return (
