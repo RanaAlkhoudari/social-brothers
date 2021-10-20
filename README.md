@@ -12,13 +12,13 @@ Run ```npm start```
 
 ## Libraries/Frameworks
 
-react: UI library
+- react: UI library
 
-react-router-dom: The router components of react
+- react-router-dom: The router components of react
 
-axios: to make HTTP requests
+- axios: to make HTTP requests
 
-react-paginate: to render a pagination
+- react-paginate: to render a pagination
 
 
 
