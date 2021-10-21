@@ -6,13 +6,11 @@ import Footer from "../components/Footer";
 
 function BlogPage() {
   return (
-    <>
-      <div className="container">
-        <BlogImage />
-        <BlogCards />
-        <Footer />
-      </div>
-    </>
+    <div className="container">
+      <BlogImage />
+      <BlogCards />
+      <Footer />
+    </div>
   );
 }
 

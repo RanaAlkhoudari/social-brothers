@@ -87,6 +87,7 @@ textarea {
   width: 30%;
   margin: 10px 20px;
   display: block;
+  color: transparent;
 }
 textarea {
   height: 400px;
@@ -237,7 +238,7 @@ select {
     text-align: center;
     margin: 30px 0px;
   }
-  
+
   .form h1 {
     font-size: 19px;
   }

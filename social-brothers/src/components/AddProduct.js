@@ -106,7 +106,6 @@ function AddProduct() {
           name="img"
           title=""
           accept="image/*"
-          style={{ color: "transparent" }}
         />
 
         <label>Bericht </label>
