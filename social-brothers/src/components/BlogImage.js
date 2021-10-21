@@ -9,17 +9,10 @@ function BlogImage() {
       <div className="image">
         <h1>Blog</h1>
         <Link to="/">
-          <span style={{ border: "none" }} className="home">
-            Home
-          </span>
+          <span className="home not-active">Home</span>
         </Link>
         <Link to="/blogs">
-          <span
-            style={{ borderBottom: "4px solid rgb(241, 100, 7)" }}
-            className="blog"
-          >
-            Blog
-          </span>
+          <span className="blog active">Blog</span>
         </Link>
       </div>
       <div className="logo">

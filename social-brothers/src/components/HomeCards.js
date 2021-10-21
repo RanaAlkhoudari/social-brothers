@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Blog from "./Blog";
+import Error from "./Error";
 
 function HomeCards() {
   const [blogs, setBlogs] = useState([]);
   const [page, setPage] = useState(2);
   const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
+
   const token = "pj11daaQRz7zUIH56B9Z";
 
   useEffect(() => {
@@ -18,10 +21,12 @@ function HomeCards() {
           },
         });
         setIsLoading(false);
+        setIsError(false);
         setBlogs(response.data);
       } catch (error) {
         console.log(error.response);
         setIsLoading(false);
+        setIsError(true);
       }
     }
     fetchData();
@@ -53,7 +58,8 @@ function HomeCards() {
   return (
     <>
       <div className="card-wrapper">
-        {blogs.length === 0 && !isLoading && <p>Geen blogs meer</p>}
+        {isError && <Error />}
+        {blogs.length === 0 && !isError && !isLoading && <p>Geen blogs meer</p>}
         {blogs.length !== 0 &&
           blogs.map((blog, index) => {
             return (
